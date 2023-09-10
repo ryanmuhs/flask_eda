@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="">Exploratory Data Analysis</h2>
+<p>Data yang ada pada file .csv tersebut adalah di bawah ini :</p>
+<div class="tabel">
+    {% for table in tables %}
+    <table class="table table-hover">
+      <!-- <thead>
+        <tr></tr>
+      </thead> -->
+      <tbody>
+        {{ table | safe }}
+      </tbody>
+    </table>
+    {% endfor %}
+    <div>
+      <canvas id="myChart" style="position: relative; height: 20vh; width: 40vw;"></canvas>
+    </div>
+</div>
+
+
+<p>Jumlah kolom : {{ kolom }}</p>
+<h5></h5>
+{% endblock %}

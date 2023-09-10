@@ -1,0 +1,26 @@
+.active{
+    width: max-content;
+    background-color: rgb(111, 0, 255);
+    border-radius: 10px;
+}
+.sidenav{
+    z-index: 1;
+    position: fixed;
+}
+
+.main_content{
+    margin-left: 25%;
+}
+
+tbody{
+    border: 1px solid black;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.tabel{
+    height: 200px;
+}
