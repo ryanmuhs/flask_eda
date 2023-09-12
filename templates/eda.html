@@ -4,22 +4,53 @@
 <h2 class="">Exploratory Data Analysis</h2>
 <p>Data yang ada pada file .csv tersebut adalah di bawah ini :</p>
 <div class="tabel">
-    {% for table in tables %}
-    <table class="table table-hover">
-      <!-- <thead>
-        <tr></tr>
-      </thead> -->
-      <tbody>
-        {{ table | safe }}
-      </tbody>
-    </table>
-    {% endfor %}
-    <div>
-      <canvas id="myChart" style="position: relative; height: 20vh; width: 40vw;"></canvas>
-    </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <!-- <th>MSSubClass</th>
+        <th>MSZoning</th>
+        <th>LotFrontage</th>
+        <th>LotArea</th>
+        <th>Street</th>
+        <th>Street</th>
+        <th>Street</th>
+        <th>Street</th>
+        <th>Street</th>
+        <th>Street</th>
+        <th>Street</th>
+        <th>Street</th>
+        <th>Street</th>
+        <th>Street</th>
+        <th>Street</th>
+        <th>Street</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      {% for table in tables %}
+      <tr>
+        {% for cell in table %}
+          <td class="col">{{ cell }}</td>
+        {% endfor %}
+        <td class="col">{{ table.MSSubClass }}</td>
+        <td class="col">{{ table.MSZoning }}</td>
+        <td class="col">{{ table.LotFrontage }}</td>
+        <td class="col">{{ table.LotArea }}</td>
+        <td class="col">{{ table.Street }}</td>
+        <td class="col">{{ table.Alley }}</td>
+        <td class="col">{{ table.LotShape }}</td>
+        <td class="col">{{ table.LandContour }}</td>
+        <td class="col">{{ table.Utilities }}</td>
+        <td class="col">{{ table.LotConfig }}</td>
+        <td class="col">{{ table.LandSlope }}</td>
+        <td class="col">{{ table.Neighborhood }}</td>
+        <td class="col">{{ table.Condition1 }}</td>
+        <td class="col">{{ table.Condition2 }}</td>
+
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </div>
-
-
 <p>Jumlah kolom : {{ kolom }}</p>
 <h5></h5>
 {% endblock %}

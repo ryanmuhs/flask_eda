@@ -1,22 +1,43 @@
 {% extends "base.html" %}
 
+{% block import %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock%}
+
+
 {% block content %}
-<div class="row">
-    <div class="col-sm-6 mb-3 mb-sm-0">
+<h3 class="text-center">KPI</h3>
+<div class="row align-items-center">
+    <div class="col-sm-4 mb-3 mb-sm-0">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Kolom</h5>
-                <p class="card-text">{{ kolom }}</p>
+                <h5 class="card-title">Avg Harga</h5>
+                <p class="card-text">$ {{ avg_harga }}</p>
             </div>
         </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Avg Lot area</h5>
+                <p class="card-text">{{ (lot_area)/(kolom)|length }} ft<sup>2</sup></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Lot area</h5>
-                <p class="card-text">{{ lot_area }}</p>
+                <p class="card-text">{{ lot_area }} ft<sup>2</sup></p>
             </div>
         </div>
     </div>
 </div>
+<!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<div class="charts">
+    <div id="plot" style="width: 20rem;height:20rem;"></div>
+    <div id="line" style="width: 20rem;height:20rem;"></div>
+</div> -->
+<iframe width="800" height="600" src="https://lookerstudio.google.com/embed/reporting/ac0da20e-3459-4708-9ab5-1f2c90390426/page/k9CcD" frameborder="0" style="border:0" allowfullscreen></iframe>
+<script type="text/javascript" src="{{ url_for('static', filename='charts.js') }}"></script>
 {% endblock %}

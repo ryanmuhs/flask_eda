@@ -24,6 +24,7 @@
 </head>
 
 <body>
+  {% block import %}{% endblock %}
   <div class="container-fluid">
     <div class="row">
       <div class="sidenav d-flex flex-column justify-content-between col-auto bg-dark min-vh-100 w-auto">
@@ -31,10 +32,10 @@
           <!-- <a href="/" class="text-light text-decoration-none d-flex align-items-center ms-4 me-0 p-0"> -->
             <img
               src="https://le-cdn.website-editor.net/s/bbf7a5ffe90a4adabeb56412afa00deb/dms3rep/multi/opt/logo-color-text-white-2-332w.png?Expires=1694971941&Signature=agdqK87LFYpcjL4YKu9jf~9G2TcT-tVHJDD0LqJNVX1XRUSW9zFgphtT1KZmulGyZIXafkjFMpkpOxQJEG9m7sWzj3nKha-D7TcdjEF8zY~Ewl~EakuwF~-651B7MY4pNwdr0Nd1Fu8QC6vcvJof4Xv27KdDzmQD07paQdFLuv0aSbrg27-ueqp0wmIKM-jKjZe5ZVG7KxR1vzcAJ6OXYlzqaf7G-2~jnFjw5IQus-x8D6pMTFImzhoDL8IKCHBVi40N-rgEsx3x4Gh01iMPY246jNHb0IEofczsYWgTXAontf3rPcrEJfZ0E6n6MvYs5Lpc39cQsAqdApUYqPAOdA__&Key-Pair-Id=K2NXBXLF010TJW"
-              class="w-50 mt-4 mb-4">
+              class="w-50 mt-4 mb-4 ms-4">
             <!-- <span class="fs-5">Menu</span> -->
           <!-- </a> -->
-          <ul class="nav nav-pills flex-column mt-2 mt-sm-0" id="menu">
+          <ul class="nav nav-pills flex-column mt-2 mt-sm-0 p-4" id="menu">
             <li class="nav-item">
               <a href="/dashboard" class="nav-link text-light">
                 <span class="material-symbols-outlined me-2">
