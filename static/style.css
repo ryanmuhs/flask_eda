@@ -1,6 +1,11 @@
+:root{
+    --primary-purple: rgb(111, 0, 255);
+    --primary-light: rgb(255, 255, 255);
+}
+
 .active{
     width: max-content;
-    background-color: rgb(111, 0, 255);
+    background-color: var(--primary-purple);
     border-radius: 10px;
 }
 .sidenav{
@@ -12,6 +17,15 @@
     margin-left: 25%;
 }
 
+.tabel{
+    max-height: 50vh;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+th{
+    position: sticky;
+}
 tbody{
     border: 1px solid black;
 }
@@ -21,6 +35,12 @@ nav{
     flex-direction: column;
 }
 
-.tabel{
-    height: 200px;
+.card{
+    background-color: var(--primary-purple);
+    color: var(--primary-light);
+}
+
+.charts{
+    display: flex;
+    flex-direction: row;
 }
